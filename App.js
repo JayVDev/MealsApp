@@ -1,25 +1,24 @@
+import React from "react";
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, FlatList, SafeAreaView } from "react-native";
+import { StyleSheet, SafeAreaView } from "react-native";
+import CategoriesScreen from "./screens/CategoriesScreen";
 
-import { CATEGORIES } from "./data/dummy-data";
-
-export default function App() {
-    return (
-        <SafeAreaView style={styles.container}>
-            <FlatList
-                data={CATEGORIES}
-                renderItem={({ item }) => <Item title={item.title} />}
-                keyExtractor={(item) => item.id}
-            />
-        </SafeAreaView>
-    );
+function App() {
+  return (
+    <>
+      <StatusBar style="light" />
+      <CategoriesScreen />
+    </>
+  );
 }
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        backgroundColor: "#fff",
-        alignItems: "center",
-        justifyContent: "center",
+        // flex: 1,
+        // backgroundColor: "#fff",
+        // alignItems: "center",
+        // justifyContent: "center",
     },
 });
+
+export default App;
